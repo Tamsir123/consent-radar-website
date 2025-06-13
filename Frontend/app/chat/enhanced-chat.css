@@ -1,0 +1,347 @@
+/* Enhanced Chat Interface Styles */
+
+/* Glassmorphism effects */
+.chat-glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .chat-glassmorphism {
+  background: rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Message bubble animations */
+.message-bubble {
+  position: relative;
+  overflow: hidden;
+}
+
+.message-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.message-bubble:hover::before {
+  left: 100%;
+}
+
+/* Typing indicator animation */
+.typing-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.typing-dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Sparkle effects */
+.sparkle-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.sparkle-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 200, 255, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 
+    0 0 5px rgba(6, 182, 212, 0.5),
+    0 0 10px rgba(6, 182, 212, 0.3),
+    0 0 15px rgba(6, 182, 212, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-glow:hover {
+  box-shadow: 
+    0 0 10px rgba(6, 182, 212, 0.8),
+    0 0 20px rgba(6, 182, 212, 0.6),
+    0 0 30px rgba(6, 182, 212, 0.4);
+}
+
+/* Floating animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Gradient animation */
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pulse glow effect */
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+  }
+}
+
+/* Message appearance animation */
+.message-appear {
+  animation: messageAppear 0.5s ease-out;
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Shimmer effect for loading */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Morphing button effect */
+.morph-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.morph-button:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+}
+
+/* Interactive send button */
+.send-button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.send-button-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.send-button-glow:hover::before {
+  left: 100%;
+}
+
+/* Avatar breathing animation */
+.avatar-breathing {
+  animation: avatarBreathing 3s ease-in-out infinite;
+}
+
+@keyframes avatarBreathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.visible {
+  opacity: 1;
+}
+
+/* Interactive message reactions */
+.message-reactions {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.message-bubble:hover .message-reactions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Status indicator pulse */
+.status-pulse {
+  animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Enhanced focus states */
+.enhanced-focus:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(6, 182, 212, 0.1),
+    0 0 20px rgba(6, 182, 212, 0.3);
+  transform: scale(1.02);
+}
+
+/* Dark mode enhancements */
+.dark .message-bubble {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.dark .neon-glow {
+  box-shadow: 
+    0 0 5px rgba(34, 197, 94, 0.5),
+    0 0 10px rgba(34, 197, 94, 0.3),
+    0 0 15px rgba(34, 197, 94, 0.2);
+}
+
+.dark .neon-glow:hover {
+  box-shadow: 
+    0 0 10px rgba(34, 197, 94, 0.8),
+    0 0 20px rgba(34, 197, 94, 0.6),
+    0 0 30px rgba(34, 197, 94, 0.4);
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .message-bubble {
+    max-width: 90%;
+  }
+  
+  .floating {
+    animation-duration: 2s;
+  }
+  
+  .sparkle-effect::after {
+    opacity: 0.5;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .chat-glassmorphism {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .dark .chat-glassmorphism {
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .floating,
+  .animated-gradient,
+  .pulse-glow,
+  .avatar-breathing,
+  .typing-dot {
+    animation: none;
+  }
+  
+  .message-bubble:hover::before,
+  .send-button-glow:hover::before {
+    transition: none;
+  }
+}

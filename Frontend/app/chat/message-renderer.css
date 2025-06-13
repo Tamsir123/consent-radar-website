@@ -1,0 +1,178 @@
+/* Styles pour le rendu des messages avec formatage riche */
+
+.message-content {
+  line-height: 1.6;
+  color: inherit;
+}
+
+/* Titres principales */
+.message-content .main-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0.75rem 0;
+  color: #FF4444;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Sous-titres de section */
+.message-content .section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  color: #FF6B35;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Listes personnalisées avec bullet points */
+.message-content .custom-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.message-content .custom-bullet-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-left: 3px solid transparent;
+  padding-left: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.message-content .custom-bullet-point:hover {
+  background: rgba(255, 68, 68, 0.05);
+  border-left-color: #FF4444;
+  border-radius: 0.25rem;
+  transform: translateX(2px);
+}
+
+/* Texte en gras */
+.message-content strong {
+  font-weight: 700;
+  color: #FF4444;
+}
+
+/* Styles pour les spans avec couleurs inline */
+.message-content span[style*="color"] {
+  font-weight: bold;
+}
+
+/* Scores et pourcentages */
+.message-content span[style*="#FF4444"] {
+  background: linear-gradient(135deg, #FF4444, #FF6B35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  text-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}
+
+/* Emojis et icônes */
+.message-content .emoji {
+  font-size: 1.2em;
+  margin-right: 0.25rem;
+  display: inline-block;
+}
+
+/* Conseils et actions */
+.message-content span[style*="#4CAF50"] {
+  color: #4CAF50 !important;
+  font-weight: bold;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+/* Séparateurs */
+.message-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF6B35, transparent);
+  margin: 1.5rem 0;
+}
+
+/* Amélioration de la lisibilité */
+.message-content br + br {
+  line-height: 0.5;
+}
+
+/* Animation d'apparition pour les éléments */
+.message-content .custom-bullet-point {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.message-content .custom-bullet-point:nth-child(1) { animation-delay: 0.1s; }
+.message-content .custom-bullet-point:nth-child(2) { animation-delay: 0.2s; }
+.message-content .custom-bullet-point:nth-child(3) { animation-delay: 0.3s; }
+.message-content .custom-bullet-point:nth-child(4) { animation-delay: 0.4s; }
+.message-content .custom-bullet-point:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mode sombre */
+.dark .message-content .section-title {
+  color: #FFB366;
+}
+
+.dark .message-content .main-title {
+  color: #FF6B6B;
+}
+
+.dark .message-content strong {
+  color: #FF6B6B;
+}
+
+.dark .message-content .custom-bullet-point:hover {
+  background: rgba(255, 107, 107, 0.1);
+  border-left-color: #FF6B6B;
+}
+
+/* Styles spéciaux pour les alertes */
+.message-content .alert-section {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.05), rgba(255, 107, 53, 0.05));
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Badges de risque */
+.message-content .risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: linear-gradient(135deg, #FF4444, #FF6B35);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+  margin: 0.5rem 0;
+}
+
+/* Conseils positifs */
+.message-content .advice-section {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(67, 160, 71, 0.05));
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}

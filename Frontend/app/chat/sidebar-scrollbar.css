@@ -1,0 +1,63 @@
+/* Scrollbar personnalisée pour la barre latérale */
+.scrollbar-hide {
+  /* Pour les navigateurs webkit */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+  }
+
+  /* Pour Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+/* Animation pour l'apparition des éléments de la sidebar */
+.sidebar-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Effet glassmorphism amélioré */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-effect-dark {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(30, 41, 59, 0.1);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+/* Animation de pulsation subtile */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.subtle-pulse {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}

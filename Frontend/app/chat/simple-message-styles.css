@@ -1,0 +1,151 @@
+/* Styles pour l'affichage simple et compact des messages */
+
+.message-content-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.message-content {
+  line-height: 1.4;
+  font-size: 14px;
+  color: #374151;
+}
+
+.dark .message-content {
+  color: #d1d5db;
+}
+
+/* Contrôles vocaux */
+.voice-controls {
+  margin-bottom: 8px;
+}
+
+.voice-controls button {
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.voice-controls button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.voice-controls button:active {
+  transform: translateY(0);
+}
+
+/* Titres principaux */
+.main-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0 6px 0;
+  color: #1f2937;
+}
+
+.dark .main-title {
+  color: #f9fafb;
+}
+
+/* Titres de section */
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 6px 0 4px 0;
+  color: #374151;
+}
+
+.dark .section-title {
+  color: #e5e7eb;
+}
+
+/* Listes avec bullet points - espacement minimal */
+.bullet-list {
+  margin: 4px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bullet-item {
+  margin: 2px 0; /* Espacement très réduit entre les éléments */
+  padding: 1px 0;
+  line-height: 1.3;
+  color: #374151;
+}
+
+.dark .bullet-item {
+  color: #d1d5db;
+}
+
+/* Mots en gras avec couleurs */
+.highlight {
+  font-weight: 700;
+  color: #dc2626; /* Rouge pour les mots importants */
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  padding: 1px 3px;
+  border-radius: 3px;
+  border: 1px solid #fecaca;
+}
+
+.dark .highlight {
+  color: #fca5a5;
+  background: linear-gradient(135deg, #991b1b, #dc2626);
+  border-color: #b91c1c;
+}
+
+/* Espacement général réduit */
+.message-content p {
+  margin: 3px 0;
+}
+
+.message-content br {
+  line-height: 0.8;
+}
+
+/* Mode spéciaux selon le contenu */
+.message-content:has(.section-title) {
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin: 4px 0;
+}
+
+.dark .message-content:has(.section-title) {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  border-color: #475569;
+}
+
+/* Numérotation pour les modes */
+.message-content .mode-number {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Styles pour les emojis et icônes */
+.message-content .emoji {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+/* Réduction des marges pour un affichage compact */
+.message-content * {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.message-content > *:first-child {
+  margin-top: 0;
+}
+
+.message-content > *:last-child {
+  margin-bottom: 0;
+}

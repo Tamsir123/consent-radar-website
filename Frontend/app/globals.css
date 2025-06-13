@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 50% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+    --primary: 195 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 195 70% 95%;
+    --secondary-foreground: 195 100% 30%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 30% 40%;
+    --accent: 195 70% 90%;
+    --accent-foreground: 195 100% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 195 100% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 70% 5%;
+    --foreground: 195 30% 90%;
+    --card: 210 70% 7%;
+    --card-foreground: 195 30% 90%;
+    --popover: 210 70% 5%;
+    --popover-foreground: 195 30% 90%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 50% 15%;
+    --secondary-foreground: 195 30% 90%;
+    --muted: 210 50% 15%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 210 50% 15%;
+    --accent-foreground: 195 30% 90%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 195 30% 90%;
+    --border: 210 50% 15%;
+    --input: 210 50% 15%;
+    --ring: 195 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-navy-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-navy-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-navy-500;
+}
+
+/* Animations personnalisées */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+}
+
+/* Thème personnalisé basé sur le logo */
+.logo-gradient {
+  @apply bg-gradient-to-r from-brand-400 to-brand-600;
+}
+
+.logo-text {
+  @apply text-brand-500 dark:text-brand-400;
+}
+
+.logo-bg-dark {
+  @apply bg-navy-900;
+}
+
+.logo-bg-light {
+  @apply bg-brand-50;
+}
+
+.card-highlight {
+  @apply border-brand-200 dark:border-brand-700;
+}
+/* Ajouter ceci aux styles existants */
+.bg-pattern {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+  background-size: 15px 15px;
+}

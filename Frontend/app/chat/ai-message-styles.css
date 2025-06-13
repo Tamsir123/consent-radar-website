@@ -1,0 +1,208 @@
+/* Styles pour les messages IA avec formatage riche */
+.ai-message-content {
+  /* Reset de base */
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Titres et sections */
+.ai-message-content h1,
+.ai-message-content h2,
+.ai-message-content h3 {
+  margin: 16px 0 8px 0;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.ai-message-content h1 {
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.ai-message-content h2 {
+  font-size: 16px;
+  color: #334155;
+}
+
+.ai-message-content h3 {
+  font-size: 15px;
+  color: #475569;
+}
+
+/* Mode sombre pour les titres */
+.dark .ai-message-content h1 {
+  color: #f1f5f9;
+}
+
+.dark .ai-message-content h2 {
+  color: #e2e8f0;
+}
+
+.dark .ai-message-content h3 {
+  color: #cbd5e1;
+}
+
+/* Listes et bullet points */
+.ai-message-content ul {
+  margin: 12px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ai-message-content ul li {
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Bullet points personnalisés */
+.ai-message-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #06b6d4;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Texte en gras */
+.ai-message-content strong,
+.ai-message-content b {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dark .ai-message-content strong,
+.dark .ai-message-content b {
+  color: #f8fafc;
+}
+
+/* Couleurs spécifiques du backend */
+.ai-message-content span[style*="color: #FF4444"],
+.ai-message-content span[style*="color: #ff4444"] {
+  color: #ef4444 !important;
+  font-weight: 700;
+}
+
+.ai-message-content span[style*="color: #FF6B35"],
+.ai-message-content span[style*="color: #ff6b35"] {
+  color: #f97316 !important;
+  font-weight: 700;
+}
+
+.ai-message-content span[style*="color: #4CAF50"],
+.ai-message-content span[style*="color: #4caf50"] {
+  color: #22c55e !important;
+  font-weight: 700;
+}
+
+/* Emojis et icônes */
+.ai-message-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, sans-serif;
+}
+
+/* Sections avec séparateurs */
+.ai-message-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  margin: 16px 0;
+  border-radius: 1px;
+}
+
+/* Formatage spécial pour les scores */
+.ai-message-content span[style*="font-size: 1.5em"] {
+  font-size: 1.3em !important;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+/* Code et texte technique */
+.ai-message-content code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 13px;
+  color: #7c3aed;
+}
+
+.dark .ai-message-content code {
+  background: #334155;
+  color: #a78bfa;
+}
+
+/* Paragraphes et espacement */
+.ai-message-content p {
+  margin: 10px 0;
+  color: #374151;
+}
+
+.dark .ai-message-content p {
+  color: #d1d5db;
+}
+
+/* Liens et interactions */
+.ai-message-content a {
+  color: #06b6d4;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.ai-message-content a:hover {
+  color: #0891b2;
+}
+
+/* Mise en valeur spéciale */
+.ai-message-content mark {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark .ai-message-content mark {
+  background: #451a03;
+  color: #fbbf24;
+}
+
+/* Responsivité */
+@media (max-width: 640px) {
+  .ai-message-content {
+    font-size: 13px;
+  }
+  
+  .ai-message-content h1 {
+    font-size: 16px;
+  }
+  
+  .ai-message-content h2 {
+    font-size: 15px;
+  }
+  
+  .ai-message-content h3 {
+    font-size: 14px;
+  }
+}
+
+/* Animation pour les éléments importants */
+.ai-message-content span[style*="color: #FF4444"]:hover,
+.ai-message-content span[style*="color: #ff4444"]:hover {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Style pour les blockquotes si utilisées */
+.ai-message-content blockquote {
+  border-left: 4px solid #06b6d4;
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #64748b;
+}
+
+.dark .ai-message-content blockquote {
+  color: #94a3b8;
+  border-left-color: #0891b2;
+}
